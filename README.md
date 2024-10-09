@@ -1,8 +1,23 @@
 # docsify plugin: Flexible Alerts
 
-[![Build Status](https://github.com/fzankl/docsify-plugin-flexible-alerts/actions/workflows/main.yml/badge.svg)](https://github.com/fzankl/docsify-plugin-flexible-alerts)
-[![npm Version](https://img.shields.io/npm/v/docsify-plugin-flexible-alerts/latest.svg)](https://www.npmjs.com/package/docsify-plugin-flexible-alerts)
-[![npm Downloads](https://img.shields.io/npm/dt/docsify-plugin-flexible-alerts.svg)](https://www.npmjs.com/package/docsify-plugin-flexible-alerts)
+[![Build Status](https://github.com/Lori3f6/docsify-plugin-flexible-alerts/actions/workflows/main.yml/badge.svg)](https://github.com/Lori3f6/docsify-plugin-flexible-alerts)
+
+> [!IMPORTANT]
+> This is a fork from [fzankl/docsify-plugin-flexible-alerts](https://github.com/fzankl/docsify-plugin-flexible-alerts) for self use.  
+> Usage for this repo is the same as origin one but added style `nyaa` for [NyaaWiki](https://wiki.nyaa.cat).  
+> Use: 
+> ```javascript
+> <script>
+>   window.$docsify = {
+>     'flexibleAlerts': {
+>       style: 'nyaa'
+>     }
+>   };
+> </script>
+> ```
+> to enable, with both light and dark theme support by default.  
+
+
 
 This docsify plugin converts blockquotes into beautiful alerts. Look and feel can be configured on a global as well as on a alert specific level so output does fit your needs (some examples are shown below). In addition, you can provide own alert types.
 

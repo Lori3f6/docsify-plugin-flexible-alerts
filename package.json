@@ -11,7 +11,7 @@
     "hint",
     "callout"
   ],
-  "author": "Fabian Zankl",
+  "author": "Fabian Zankl, langua",
   "license": "MIT",
   "files": [
     "dist"
@@ -24,13 +24,13 @@
     "prepare": "npm run clean && npm run build",
     "start": "npm run build -- -w"
   },
-  "homepage": "https://github.com/fzankl/docsify-plugin-flexible-alerts#readme",
+  "homepage": "https://github.com/Lori3f6/docsify-plugin-flexible-alerts#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fzankl/docsify-plugin-flexible-alerts.git"
+    "url": "git+https://github.com/Lori3f6/docsify-plugin-flexible-alerts.git"
   },
   "bugs": {
-    "url": "https://github.com/fzankl/docsify-plugin-flexible-alerts/issues"
+    "url": "https://github.com/Lori3f6/docsify-plugin-flexible-alertsissues"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",
