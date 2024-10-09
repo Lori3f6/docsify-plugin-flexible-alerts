@@ -64,6 +64,10 @@
   @return 'data:image/svg+xml,%3Csvg width="1em" height="1em" viewBox="0 0 16 16" fill="#{$color}" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/%3E%3Cpath fill-rule="evenodd" d="M11.354 4.646a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708l6-6a.5.5 0 0 1 .708 0z"/%3E%3C/svg%3E';
 }
 
+@function get-important-icon($color) {
+  @return get-warning-icon($color)
+}
+
 // ####################################################
 // ################## Style: Callout ##################
 // ####################################################
@@ -125,4 +129,53 @@
   @include flat-item('tip', #dbefdc, #18381a, #285b2a);
   @include flat-item('warning', #ffddd3, #581e0c, #852d12);
   @include flat-item('attention', #fdd9d7, #551713, #7f231c);
+}
+
+// ####################################################
+// #################### Style: Nyaa ###################
+// ####################################################
+
+@mixin nyaa-item($name, $heading-color, $text-color) {
+  &.#{$name} {
+    color: $text-color;
+    background-color: rgba($heading-color, 10%);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: rgba($heading-color, 6%);
+    }
+
+    border-left: 4px solid $heading-color;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+
+    .title {
+      color: $heading-color;
+    }
+
+    .icon-#{$name} {
+      background-image: url("#{call(get-function(get-#{$name}-icon), $heading-color)}");
+    }
+  }
+}
+
+.alert.nyaa {
+  color: #383d41;
+  background-color: #e2e3e5;
+
+  @include nyaa-item('note', #36a2c2, #205a72); 
+  @include nyaa-item('tip', #339900, #1c6d2c); 
+  @include nyaa-item('warning', #f66, #a32b21); 
+  @include nyaa-item('attention', #ed7b69, #8c2f2f); 
+  @include nyaa-item('important', #9b59b6, #4a235a); 
+
+  @media (prefers-color-scheme: dark) {
+    @include nyaa-item('note', #79a8b9, #d0e6eb); 
+    @include nyaa-item('tip', #339900, #d3e7d1); 
+    @include nyaa-item('warning', #f66, #f0d1c3); 
+    @include nyaa-item('attention', #fa9871, #f4bbb7); 
+    @include nyaa-item('important', #9979b9, #e1bee7); 
+
+    color: #c7c7c7;
+    background-color: #333;
+  }
 }
