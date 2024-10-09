@@ -140,10 +140,6 @@
     color: $text-color;
     background-color: rgba($heading-color, 10%);
 
-    @media (prefers-color-scheme: dark) {
-      background-color: rgba($heading-color, 6%);
-    }
-
     border-left: 4px solid $heading-color;
     border-bottom-right-radius: 2px;
     border-top-right-radius: 2px;
